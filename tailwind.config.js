@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+1/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -11,3 +11,4 @@ export default {
     require('@tailwindcss/forms'),
   ],
 }
+

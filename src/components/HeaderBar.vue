@@ -1,22 +1,23 @@
-<template>
-  <header class="w-full mx-auto mt-6 bg-white/10 backdrop-blur-xl rounded-3xl shadow-lg">
-    <nav class="px-10 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <img src="/vite.svg" class="h-8 w-8" />
-        <span class="font-semibold text-xl">Green Public</span>
-      </div>
-      <div class="hidden md:flex space-x-8 text-white/90 font-medium">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">About us</a>
-        <a href="#" class="nav-link">Donation</a>
-      </div>
-      <button class="border border-white/50 rounded-full px-4 py-1 text-sm">AZ</button>
-    </nav>
-  </header>
-</template>
+<script setup>
+import greenPublicLogo from '@/assets/images/green-public.png';
+</script>
 
-<style scoped>
-.nav-link {
-  @apply hover:text-green-300;
-}
-</style>
+<template>
+  <section id="section-header">
+    <div class="container header-wrapper">
+      <header class="site-header">
+        <div class="logo">
+          <img
+            :src="greenPublicLogo"
+            alt="Green Public Logo"
+            class="logo-img"
+          />
+        </div>
+
+        <div class="language-selector">
+          <span class="lang-text">AZ</span>
+        </div>
+      </header>
+    </div>
+  </section>
+</template>
