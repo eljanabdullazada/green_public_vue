@@ -2,11 +2,7 @@
   <section id="section-hero">
     <div class="container hero-container">
       <!-- Background Elements -->
-      <div class="hero-bg">
-        <div class="bg-blur blur-1"></div>
-        <div class="bg-blur blur-2"></div>
-        <div class="bg-blur blur-3"></div>
-      </div>
+      
 
       <div class="hero-content">
         <div class="hero-titles">
@@ -19,7 +15,7 @@
 
         <div class="hero-main-row">
           <!-- Map Visualization -->
-          <AzerbaijanMap />
+          <img src="../assets/images/azerbaijan.svg" alt="Azerbaijan Map" class="hero-map-image" />
 
           <!-- Donation Form -->
           <DonationForm />
@@ -30,6 +26,5 @@
 </template>
 
 <script setup>
-import AzerbaijanMap from './AzerbaijanMap.vue';
 import DonationForm from './DonationForm.vue';
 </script>

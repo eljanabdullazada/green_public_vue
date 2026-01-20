@@ -13,11 +13,11 @@ import YouTubeIcon from './icons/YouTubeIcon.vue';
           <div class="footer-logo-group">
             <div class="footer-logo">
               <img
-                :src="assets/images/about"
+                src="@/assets/images/green-public-dark.svg"
                 alt="Logo"
               />
               <img
-                src="https://via.placeholder.com/150x62.png?text=Eco+Logo"
+                src="@/assets/images/eco-logo-colored.svg"
                 alt="Eco Logo"
               />
             </div>
@@ -37,7 +37,7 @@ import YouTubeIcon from './icons/YouTubeIcon.vue';
           <div class="footer-socials">
             <a href="#" class="social-icon"><LinkedInIcon /></a>
             <a href="#" class="social-icon"><InstagramIcon /></a>
-            <a href="#" class="social-icon"><TwitterIcon /></a>
+            <a href="#" class="social-icon"><FacebookIcon /></a>
             <a href="#" class="social-icon"><YouTubeIcon /></a>
           </div>
         </div>

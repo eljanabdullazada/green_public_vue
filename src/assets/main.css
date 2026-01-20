@@ -2,8 +2,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
-  color: #3b3d3b;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
@@ -96,7 +95,7 @@ p {
 }
 
 #section-hero {
-  background-color: #093923;
+  background: #093923 radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
   min-height: 983px;
   display: flex;
   flex-direction: column;
@@ -139,32 +138,6 @@ p {
   width: 100%;
 }
 
-.bg-blur {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(150px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.blur-1 {
-  width: 636px;
-  height: 815px;
-  top: -319px;
-  left: -384px;
-}
-.blur-2 {
-  width: 636px;
-  height: 815px;
-  top: -380px;
-  left: -206px;
-}
-.blur-3 {
-  width: 636px;
-  height: 815px;
-  top: 384px;
-  left: 1091px;
-}
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -194,42 +167,79 @@ p {
   line-height: 1.5;
 }
 
+
+
 .hero-main-row {
+
   display: flex;
-  justify-content: center;
-  gap: 100px;
+
+  justify-content: space-around;
+
+  padding: 0 5%;
+
   width: 100%;
+
   flex-wrap: wrap;
+
 }
 
+
+.hero-map-image {
+
+  width: 50%;
+  height: auto;
+
+}
+
+
+
 /* Map Styles */
+
 .map-wrapper {
+
   width: 580px;
+
   height: 473px;
+
   position: relative;
+
 }
 
 .map-composition {
+
   position: relative;
+
   width: 100%;
+
   height: 100%;
+
 }
 
 .map-part {
+
   position: absolute;
+
 }
 
 .map-label {
+
   position: absolute;
+
   color: #e5e5e5;
+
   font-size: 12px;
+
   font-weight: 500;
+
   text-align: center;
+
 }
 
+
+
 /* Form Styles */
+
 .donation-form {
-  width: 624px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.1) 0%,
@@ -238,10 +248,12 @@ p {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: flex-end;
+  width: 624px;
+  max-width: 100%;
 }
 
 .form-row {
@@ -263,7 +275,7 @@ p {
 
 .form-group label {
   color: #aaaaaa;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .input-wrapper {
@@ -273,17 +285,21 @@ p {
   height: 36px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 8px 16px;
   width: 100%;
+  position: relative;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper select {
   border: none;
   outline: none;
   width: 100%;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #6e726e;
+  background: transparent;
+  appearance: none;
 }
 
 .input-wrapper textarea {
@@ -317,15 +333,22 @@ p {
 .btn-donate {
   background-color: #3b6845;
   color: white;
-  padding: 8px 24px;
+  padding: 8px 32px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
-  width: 146px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.btn-donate:hover {
+  background-color: #2e5236;
 }
 
 .dropdown-wrapper {
@@ -537,7 +560,9 @@ p {
   flex: 1;
   max-width: 580px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;.hero-map-image {
+  transform: scale(0.9);
+}
   gap: 20px;
 }
 
@@ -669,21 +694,52 @@ p {
   text-decoration: none;
 }
 
- @media (max-width: 900px) {
-  .site-footer {
-    padding: 40px 20px;
-  }
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-info {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
+  @media (max-width: 900px) {
+
+   .site-footer {
+
+     padding: 40px 20px;
+
+   }
+
+   .footer-top {
+
+     flex-direction: column;
+
+     align-items: flex-start;
+
+   }
+
+   .footer-info {
+
+     flex-direction: column;
+
+     gap: 20px;
+
+   }
+
+   .footer-bottom {
+
+     flex-direction: column;
+
+     align-items: center;
+
+     text-align: center;
+
+   }
+
+ }
+
+ 
+
+ @media (max-width: 768px) {
+
+   .form-row {
+
+     flex-direction: column;
+
+   }
+
+ }
+
+ 

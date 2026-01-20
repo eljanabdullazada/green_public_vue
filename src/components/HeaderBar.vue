@@ -1,5 +1,5 @@
 <script setup>
-import greenPublicLogo from '@/assets/images/green-public.png';
+import greenPublicLogo from '@/assets/images/green-public.svg';
 </script>
 
 <template>
