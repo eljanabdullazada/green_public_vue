@@ -28,7 +28,7 @@
           <button class="btn-more">
             <span>More</span>
             <img
-              src="https://via.placeholder.com/24x24.png?text=->"
+              src="@/assets/images/icons/ArrowRight.png"
               alt="Arrow Right"
             />
           </button>

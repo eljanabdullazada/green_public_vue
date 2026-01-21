@@ -1,10 +1,3 @@
-<script setup>
-import LinkedInIcon from './icons/LinkedInIcon.vue';
-import InstagramIcon from './icons/InstagramIcon.vue';
-import TwitterIcon from './icons/TwitterIcon.vue';
-import YouTubeIcon from './icons/YouTubeIcon.vue';
-</script>
-
 <template>
   <section id="section-footer">
     <footer class="site-footer">
@@ -35,10 +28,18 @@ import YouTubeIcon from './icons/YouTubeIcon.vue';
           </div>
 
           <div class="footer-socials">
-            <a href="#" class="social-icon"><LinkedInIcon /></a>
-            <a href="#" class="social-icon"><InstagramIcon /></a>
-            <a href="#" class="social-icon"><FacebookIcon /></a>
-            <a href="#" class="social-icon"><YouTubeIcon /></a>
+            <a href="https://www.linkedin.com/company/green-public/?originalSubdomain=az" target="_blank" class="social-icon">
+              <img src="@/assets/images/social/LinkedinLogo.png" alt="LinkedIn" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="@/assets/images/social/InstagramLogo.png" alt="Instagram" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="@/assets/images/social/FacebookLogo.png" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="@/assets/images/social/YoutubeLogo.png" alt="YouTube" />
+            </a>
           </div>
         </div>
 
