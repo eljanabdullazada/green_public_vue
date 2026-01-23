@@ -51,6 +51,7 @@ p {
 
 .header-wrapper {
   padding: 20px 20px;
+
 }
 
 .site-header {
@@ -95,7 +96,7 @@ p {
 }
 
 #section-hero {
-  background: #093923 radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  background: #093923 radial-gradient(circle, #0C3C27 0%, rgba(255, 255, 255, 0) 70%);
   min-height: 983px;
   display: flex;
   flex-direction: column;
@@ -248,7 +249,7 @@ p {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.53);
   display: flex;
   flex-direction: column;
   gap: 20px;

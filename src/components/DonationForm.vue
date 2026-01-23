@@ -143,7 +143,7 @@ onUnmounted(() => {
     <div class="form-group full-width">
       <label>Donation For Whom or For What</label>
       <div class="input-wrapper textarea-like">
-        <textarea placeholder=""></textarea>
+        <textarea placeholder="">Person’s name, surname, company name, or donation type</textarea>
       </div>
     </div>
 
