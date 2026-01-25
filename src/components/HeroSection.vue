@@ -1,12 +1,22 @@
 <template>
   <section id="section-hero">
+    <img
+      src="../assets/images/ellipse-left-top.png"
+      alt="ellipse-left-top"
+      class="ellipse-left-top"
+    />
+    <img
+      src="../assets/images/ellipse-right-bottom.png"
+      alt="ellipse-right-bottom"
+      class="ellipse-right-bottom"
+    />
     <!-- Background Elements -->
     <img
       src="../assets/images/header-form-background.png"
       alt="background-element"
       class="background-element"
     />
-    <div class="container hero-container">
+    <div class="hero-container">
       <div class="hero-content">
         <div class="hero-titles">
           <h1 class="main-title">Donate Trees</h1>
@@ -61,13 +71,32 @@ import DonationForm from "./DonationForm.vue";
   bottom: 40px;
   right: 0;
   z-index: 0;
-  filter: blur(0px);
-  transform: scale(0.9);
+  /* filter: blur(12px);*/
+  /* opacity: 0.6; */
+  /* transform: scale(0.95); */
   transform-origin: bottom right;
 }
 
 .hero-container {
   position: relative;
   z-index: 1;
+}
+
+.ellipse-left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  mix-blend-mode: overlay;
+  filter: blur(120px);
+}
+
+.ellipse-right-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  mix-blend-mode: overlay;
+  filter: blur(120px);
 }
 </style>
