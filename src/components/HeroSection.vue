@@ -17,13 +17,28 @@
         </div>
 
         <div class="hero-layout-container">
-          <!-- Map Visualization -->
-          <img
-            src="../assets/images/azerbaijan.svg"
-            alt="Azerbaijan Map"
-            class="hero-map-image"
-          />
+          <div class="hero-left-column">
+            <div class="hero-map-wrapper">
+              <img
+                src="../assets/images/azerbaijan.svg"
+                alt="Azerbaijan Map"
+                class="hero-map-image"
+              />
+            </div>
 
+            <div class="hero-logos-wrapper">
+              <img
+                src="../assets/images/green-public.svg"
+                alt="Green Public Logo"
+                class="hero-logo-image"
+              />
+              <img
+                src="../assets/images/eco-logo.svg"
+                alt="Eco Logo"
+                class="hero-logo-image"
+              />
+            </div>
+          </div>
           <!-- Donation Form -->
           <DonationForm />
         </div>
@@ -33,7 +48,7 @@
 </template>
 
 <script setup>
-import DonationForm from './DonationForm.vue';
+import DonationForm from "./DonationForm.vue";
 </script>
 
 <style scoped>

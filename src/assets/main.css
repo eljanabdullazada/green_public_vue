@@ -27,8 +27,9 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1,
@@ -170,28 +171,55 @@ p {
 
 
 
-.hero-main-row {
+.hero-layout-container {
+  width: min(1360px, 100%);
+  height: 559px;
+  margin: 0 auto;
 
-  display: flex;
-
-  justify-content: space-around;
-
-  padding: 0 5%;
-
-  width: 100%;
-
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: 580px 624px;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.hero-left-column {
+  width: 580px;
+  height: 559px; /* match hero-layout-container height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .hero-map-image {
-
-  width: 50%;
-  height: auto;
-
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
+
+.hero-map-wrapper {
+  width: 580px;
+  height: 472.94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-logos-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-logo-image {
+  height: auto;
+  width: 60px;
+  object-fit: contain;
+}
 
 
 /* Map Styles */
@@ -205,7 +233,6 @@ p {
   position: relative;
 
 }
-
 .map-composition {
 
   position: relative;
@@ -244,16 +271,17 @@ p {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.1) 0%,
-    rgba(153, 153, 153, 0.08) 100%
+    rgba(153, 153, 153, 0) 100%
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.53);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 624px;
+  height: 559px;
   max-width: 100%;
 }
 
@@ -326,7 +354,7 @@ p {
 }
 
 .input-wrapper.textarea-like {
-  height: 75px;
+  height: 70px;
   align-items: flex-start;
   padding-top: 12px;
 }
@@ -391,28 +419,56 @@ p {
 
 
  @media (max-width: 1200px) {
-  .hero-main-row {
+  .hero-layout-container {
     gap: 40px;
+    grid-template-columns: 1fr;
+    max-width: 624px;
   }
   .map-wrapper {
     transform: scale(0.8);
   }
 }
 
- @media (max-width: 1024px) {
-  .hero-main-row {
+
+@media (max-width: 1024px) {
+  .hero-layout-container {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;          /* CRITICAL */
+    gap: 40px;
   }
+
+  .hero-left-column {
+    display: contents;
+    width: 100%;
+    height: auto;          /* CRITICAL */
+  }
+
+  .hero-map-wrapper {
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+    margin: 0 auto;
+    order: 1;
+  }
+
   .donation-form {
     width: 100%;
-    max-width: 600px;
-    align-items: center;
+    max-width: 624px;
+    height: auto;          /* CRITICAL */
+    margin: 0 auto;
+    order: 2;
   }
-  .btn-donate {
-    width: 100%;
+
+  .hero-logos-wrapper {
+    justify-content: center;
+    margin-top: 16px;
+    order: 3;
   }
 }
+
 
 #section-certificate {
   background-color: #fafafa;
