@@ -1,10 +1,10 @@
 <template>
   <section id="section-hero">
-    <!-- <img
-      src="../assets/images/ellipse-left-top.png"
+    <img
+      src="../assets/images/left-top-background-mobile.svg"
       alt="ellipse-left-top"
       class="ellipse-left-top"
-    /> -->
+    />
     <img
       src="../assets/images/ellipse-right-bottom.png"
       alt="ellipse-right-bottom"
@@ -101,9 +101,36 @@ import DonationForm from "./DonationForm.vue";
   opacity: 0.6;
 }
 
+@media (max-width: 1024px) {
+  .ellipse-left-top {
+    width: 120%;
+    top: -10%;
+    left: -10%;
+
+    filter: blur(90px);
+    rotate: 30deg;
+    z-index: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .ellipse-right-bottom {
     display: none;
   }
+
+ .ellipse-left-top {
+    position: absolute;
+    /* top: -20%;
+    left: -20%; */
+    width: 140%;
+    height: auto;
+
+    z-index: 0;
+
+    filter: blur(60px);     
+    rotate: 0deg;            
+    /* opacity: 0.9; */
+  }
+
 }
 </style>
