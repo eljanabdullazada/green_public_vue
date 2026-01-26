@@ -24,7 +24,7 @@
         <div class="hero-titles">
           <h1 class="main-title">Donate Trees</h1>
           <p class="subtitle">
-            Our services support ESG performance and carbon management 
+            Our services support ESG performance and carbon management <br>
             through reliable data and practical tools.
           </p>
         </div>
