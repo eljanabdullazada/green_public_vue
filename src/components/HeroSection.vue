@@ -11,11 +11,14 @@
       class="ellipse-right-bottom"
     />
     <!-- Background Elements header-form-background.png-->
-    <img
+    <!-- <img
       src="../assets/images/bg.png"
       alt="background-element"
       class="background-element"
-    />
+    /> -->
+
+    <div class="background-element"></div>
+
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-titles">
@@ -66,7 +69,7 @@ import DonationForm from "./DonationForm.vue";
   position: relative;
 }
 
-.background-element {
+/* .background-element {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +77,19 @@ import DonationForm from "./DonationForm.vue";
   height: 100%;
   object-fit: cover;
   z-index: 0;
+} */
+
+.background-element {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url('../assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 .hero-container {
   position: relative;
@@ -117,6 +132,22 @@ import DonationForm from "./DonationForm.vue";
   .ellipse-right-bottom {
     display: none;
   }
+
+  @media (max-width: 768px) {
+  .background-element {
+    background-image: url('../assets/images/45-degree-form-background.png');
+    background-position: center;
+    margin-top: 300px;
+    max-height: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .background-element {
+    opacity: 0.8;
+  }
+}
+
 
  .ellipse-left-top {
     position: absolute;
