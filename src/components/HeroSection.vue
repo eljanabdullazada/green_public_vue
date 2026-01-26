@@ -1,18 +1,18 @@
 <template>
   <section id="section-hero">
-    <img
+    <!-- <img
       src="../assets/images/ellipse-left-top.png"
       alt="ellipse-left-top"
       class="ellipse-left-top"
-    />
+    /> -->
     <img
       src="../assets/images/ellipse-right-bottom.png"
       alt="ellipse-right-bottom"
       class="ellipse-right-bottom"
     />
-    <!-- Background Elements -->
+    <!-- Background Elements header-form-background.png-->
     <img
-      src="../assets/images/header-form-background.png"
+      src="../assets/images/bg.png"
       alt="background-element"
       class="background-element"
     />
@@ -21,8 +21,8 @@
         <div class="hero-titles">
           <h1 class="main-title">Donate Trees</h1>
           <p class="subtitle">
-            Our services support ESG performance and carbon management through
-            reliable data and practical tools.
+            Our services support ESG performance and carbon management 
+            through reliable data and practical tools.
           </p>
         </div>
 
@@ -68,13 +68,12 @@ import DonationForm from "./DonationForm.vue";
 
 .background-element {
   position: absolute;
-  bottom: 40px;
-  right: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
-  /* filter: blur(12px);*/
-  /* opacity: 0.6; */
-  /* transform: scale(0.95); */
-  transform-origin: bottom right;
 }
 
 .hero-container {
@@ -87,16 +86,24 @@ import DonationForm from "./DonationForm.vue";
   top: 0;
   left: 0;
   z-index: 2;
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
   filter: blur(120px);
+  rotate: 60deg;
 }
 
 .ellipse-right-bottom {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
   mix-blend-mode: overlay;
-  filter: blur(120px);
+  filter: blur(50px);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .ellipse-right-bottom {
+    display: none;
+  }
 }
 </style>
